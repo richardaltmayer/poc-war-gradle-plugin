@@ -1,0 +1,33 @@
+plugins {
+    id 'java-gradle-plugin'
+}
+
+group = 'poc.war'
+version = '1.0.0'
+
+gradlePlugin {
+    website = 'https://github.com/ysb33r/gradleTest'
+    vcsUrl = 'https://github.com/ysb33r/gradleTest.git'
+    plugins {
+        gradletestPlugin {
+            id = 'poc.war'
+            displayName = 'Plugin para adequar arquivo web.xml'
+            description = 'Plugin para adequar arquivo web.xml'
+            tags.addAll('war')
+            implementationClass = 'poc.war.CustomWarPlugin'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
