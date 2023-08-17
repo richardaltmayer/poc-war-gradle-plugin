@@ -6,8 +6,8 @@ group = 'poc.war'
 version = '1.0.0'
 
 gradlePlugin {
-    website = 'https://github.com/ysb33r/gradleTest'
-    vcsUrl = 'https://github.com/ysb33r/gradleTest.git'
+    website = 'https://github.com/richardaltmayer/poc-war-gradle-plugin'
+    vcsUrl = 'https://github.com/richardaltmayer/poc-war-gradle-plugin.git'
     plugins {
         gradletestPlugin {
             id = 'poc.war'
